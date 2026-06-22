@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaufy Yana Ezani - Software Developer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #0c5a8a;
+            --secondary: #f5f5f5;
+            --text: #333;
+            --light: #fff;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--light);
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--light);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        nav .logo {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, #0a4a6f 100%);
+            color: var(--light);
+            padding: 120px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero .subtitle {
+            font-size: 20px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: var(--light);
+            color: var(--primary);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--light);
+            border: 2px solid var(--light);
+        }
+
+        .btn-secondary:hover {
+            background: var(--light);
+            color: var(--primary);
+        }
+
+        /* About Section */
+        .about {
+            padding: 80px 20px;
+            background: var(--secondary);
+        }
+
+        .section-title {
+            font-size: 36px;
+            margin-bottom: 40px;
+            text-align: center;
+            color: var(--primary);
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+            font-size: 16px;
+            color: var(--text);
+        }
+
+        /* Projects Section */
+        .projects {
+            padding: 80px 20px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .project-card {
+            background: var(--light);
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 30px;
+            transition: all 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .project-card h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 22px;
+        }
+
+        .project-card .subtitle {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .project-card p {
+            margin-bottom: 20px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .tech-tag {
+            background: var(--secondary);
+            color: var(--primary);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .project-links a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .project-links a:hover {
+            color: #0a4a6f;
+        }
+
+        /* Skills Section */
+        .skills {
+            padding: 80px 20px;
+            background: var(--secondary);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .skill-category h4 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .skill-category ul {
+            list-style: none;
+        }
+
+        .skill-category li {
+            padding: 8px 0;
+            color: #555;
+        }
+
+        .skill-category li:before {
+            content: "▸ ";
+            color: var(--primary);
+            margin-right: 10px;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .contact-info {
+            max-width: 600px;
+            margin: 40px auto;
+            font-size: 18px;
+        }
+
+        .contact-info p {
+            margin: 15px 0;
+        }
+
+        .contact-info a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: var(--light);
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 20px;
+                font-size: 14px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero .subtitle {
+                font-size: 16px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .projects-grid {
+                gap: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="#" class="logo">SYE</a>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Shaufy Yana Ezani</h1>
+            <p class="subtitle">Software Developer | Flutter | Full-Stack | Mobile-First</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="https://96c9e21b-939b-4a49-9101-4aef285fd279.filesusr.com/ugd/845794_d7877ee977ef4f399983fe9cedb75e61.pdf" target="_blank" class="btn btn-secondary">Download Resume</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <p>I'm a Software Developer with hands-on experience in full-stack development, specializing in mobile applications and web solutions. Currently working at Allgo Technologies on warehouse management systems, where I collaborate with cross-functional teams to deliver high-quality products.</p>
+                <br>
+                <p>I'm passionate about writing clean, maintainable code and building user-centric applications. My expertise spans Flutter mobile development, Vue.js frontend work, REST API integration, and SQL Server optimization. I'm fluent in English and Bahasa Malaysia, with conversational Mandarin.</p>
+                <br>
+                <p>When I'm not coding, I'm exploring new technologies, contributing to personal projects, and continuously learning to stay updated with industry trends.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <!-- Fleetros -->
+                <div class="project-card">
+                    <h3>Fleetros</h3>
+                    <p class="subtitle">Fleet & Vehicle Rental Management Mobile App</p>
+                    <p>A comprehensive mobile application for fleet management built with Capacitor and Tailwind CSS. Features include vehicle tracking, booking management with preview-modify flows, payment processing, settlements, accident reports, and loyalty programs.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Capacitor</span>
+                        <span class="tech-tag">Tailwind CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">REST APIs</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/yanaezani/fleetros" target="_blank">View Code →</a>
+                    </div>
+                </div>
+
+                <!-- FloraHub -->
+                <div class="project-card">
+                    <h3>FloraHub</h3>
+                    <p class="subtitle">Smart Plant Hydration System (IoT + Mobile)</p>
+                    <p>Final year project combining IoT sensors with a mobile app. Built with Flutter, Spring Boot, and Grafana for data visualization. Features real-time soil moisture monitoring, automated watering, and analytics dashboard for sustainable plant care.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Flutter</span>
+                        <span class="tech-tag">Dart</span>
+                        <span class="tech-tag">Spring Boot</span>
+                        <span class="tech-tag">Grafana</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/yanaezani/florahub" target="_blank">View Code →</a>
+                    </div>
+                </div>
+
+                <!-- Travel App -->
+                <div class="project-card">
+                    <h3>Travel App</h3>
+                    <p class="subtitle">Location-Based Travel Mobile Application</p>
+                    <p>Feature-rich mobile travel application built with Flutter. Integrates Google Maps API for location services, implements token-based authentication, and includes rating/review systems. Tested and debugged using Postman for API stability.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Flutter</span>
+                        <span class="tech-tag">Google Maps API</span>
+                        <span class="tech-tag">REST APIs</span>
+                        <span class="tech-tag">Authentication</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/yanaezani/travel-app" target="_blank">View Code →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Mobile Development</h4>
+                    <ul>
+                        <li>Flutter & Dart</li>
+                        <li>React Native</li>
+                        <li>Capacitor</li>
+                        <li>Mobile-First Design</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Frontend</h4>
+                    <ul>
+                        <li>Vue.js</li>
+                        <li>JavaScript/HTML/CSS</li>
+                        <li>React</li>
+                        <li>Tailwind CSS</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Backend & Databases</h4>
+                    <ul>
+                        <li>Spring Boot</li>
+                        <li>ASP.NET & C#</li>
+                        <li>SQL Server</li>
+                        <li>REST APIs</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Tools & Platforms</h4>
+                    <ul>
+                        <li>Git & GitHub</li>
+                        <li>Postman</li>
+                        <li>Figma</li>
+                        <li>Firebase</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+            <div class="contact-info">
+                <p>I'm always interested in hearing about new opportunities and collaborations.</p>
+                <p>
+                    <strong>Phone:</strong> <a href="tel:+60111649659">+6011-16499659</a>
+                </p>
+                <p>
+                    <strong>Email:</strong> <a href="mailto:yanaezani48@gmail.com">yanaezani48@gmail.com</a>
+                </p>
+                <p>
+                    <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/shaufy-yana-ezani" target="_blank">Shaufy Yana Ezani</a>
+                </p>
+                <p>
+                    <strong>GitHub:</strong> <a href="https://github.com/yanaezani" target="_blank">yanaezani</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Shaufy Yana Ezani. All rights reserved.</p>
+        <p>Based in Kuala Lumpur, Malaysia</p>
+    </footer>
+</body>
+</html>
