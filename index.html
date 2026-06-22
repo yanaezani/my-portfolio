@@ -443,11 +443,26 @@
             transform: scaleX(1);
         }
 
+        .project-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
         .project-card h3 {
             color: var(--primary-dark);
             margin-bottom: 6px;
             font-size: 21px;
             font-weight: 700;
+        }
+
+        .project-date {
+            font-size: 12.5px;
+            font-weight: 600;
+            color: var(--text-muted);
+            white-space: nowrap;
         }
 
         .project-card .subtitle {
@@ -799,7 +814,10 @@
             <div class="projects-grid">
                 <!-- Fleetros -->
                 <div class="project-card reveal">
-                    <h3>Fleetros</h3>
+                    <div class="project-card-header">
+                        <h3>Fleetros</h3>
+                        <span class="project-date">Jan 2026 - Present</span>
+                    </div>
                     <p class="subtitle">Fleet & Vehicle Rental Management Mobile App</p>
                     <p>A comprehensive mobile application for fleet management built with Capacitor and Tailwind CSS. Features include vehicle tracking, booking management with preview-modify flows, payment processing, settlements, accident reports, and loyalty programs.</p>
                     <div class="tech-stack">
@@ -816,7 +834,10 @@
 
                 <!-- Travel App -->
                 <div class="project-card reveal">
-                    <h3>Travel App</h3>
+                    <div class="project-card-header">
+                        <h3>Travel App</h3>
+                        <span class="project-date">Aug 2025 - Dec 2025</span>
+                    </div>
                     <p class="subtitle">Location-Based Travel Mobile Application</p>
                     <p>Feature-rich mobile travel application built with Flutter. Integrates Google Maps API for location services, implements token-based authentication, and includes rating/review systems. Tested and debugged using Postman for API stability.</p>
                     <div class="tech-stack">
@@ -835,7 +856,10 @@
 
                 <!-- FloraHub -->
                 <div class="project-card reveal">
-                    <h3>FloraHub</h3>
+                    <div class="project-card-header">
+                        <h3>FloraHub</h3>
+                        <span class="project-date">Mar 2024 - Jul 2024</span>
+                    </div>
                     <p class="subtitle">Smart Plant Hydration System (IoT + Mobile)</p>
                     <p>Final year project combining IoT sensors with a mobile app. Built with Flutter, Spring Boot, and Grafana for data visualization. Features real-time soil moisture monitoring, automated watering, and analytics dashboard for sustainable plant care.</p>
                     <div class="tech-stack">
