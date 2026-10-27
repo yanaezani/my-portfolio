@@ -317,6 +317,13 @@ nav a:not(.logo):hover::after {
     margin-bottom: 20px;
 }
 
+/* Justified paragraphs; hyphenation avoids wide word gaps on narrow screens */
+.about-content p,
+.project-card p {
+    text-align: justify;
+    hyphens: auto;
+}
+
 .about-stats {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
