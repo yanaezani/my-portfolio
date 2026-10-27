@@ -4,10 +4,13 @@ Personal portfolio website for **Shaufy Yana Ezani**, a Full-Stack Developer bas
 
 Built with plain HTML, CSS and JavaScript. No frameworks or build step are needed.
 
+**Live site:** https://my-portfolio-olive-eight.vercel.app/
+
 ## Links
 
 | | |
 |---|---|
+| Portfolio | [my-portfolio-olive-eight.vercel.app](https://my-portfolio-olive-eight.vercel.app/) |
 | Resume | [Google Docs](https://docs.google.com/document/d/1_G_Ok2i443YpmVv7WpauiFyuAB5ndX5FRHnUydUjFhI/edit?usp=sharing) |
 | LinkedIn | [Shaufy Yana Ezani](https://www.linkedin.com/in/shaufy-yana-ezani-87220326a) |
 | GitHub | [@yanaezani](https://github.com/yanaezani) |
