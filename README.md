@@ -1,6 +1,6 @@
 # Shaufy Yana Ezani — Portfolio
 
-Personal portfolio website for **Shaufy Yana Ezani**, a Full-Stack Developer based in Petaling Jaya, Selangor, working with C#/.NET, Flutter and Vue.js.
+Personal portfolio website for **Shaufy Yana Ezani**, a Full-Stack Developer based in Petaling Jaya, Selangor, working with C# .NET, SQL Server and Flutter.
 
 Built with plain HTML, CSS and JavaScript. No frameworks or build step are needed.
 
@@ -11,7 +11,7 @@ Built with plain HTML, CSS and JavaScript. No frameworks or build step are neede
 | | |
 |---|---|
 | Portfolio | [my-portfolio-olive-eight.vercel.app](https://my-portfolio-olive-eight.vercel.app/) |
-| Resume | [Google Docs](https://docs.google.com/document/d/1_G_Ok2i443YpmVv7WpauiFyuAB5ndX5FRHnUydUjFhI/edit?usp=sharing) |
+| Resume | [Google Docs](https://docs.google.com/document/d/1jGD0g9AjKWZRXMMFtfcZwkOhfNg4QzetajnnmVnIMBY/edit?usp=sharing) |
 | LinkedIn | [Shaufy Yana Ezani](https://www.linkedin.com/in/shaufy-yana-ezani-87220326a) |
 | GitHub | [@yanaezani](https://github.com/yanaezani) |
 | Email | [yanaezani48@gmail.com](mailto:yanaezani48@gmail.com) |
